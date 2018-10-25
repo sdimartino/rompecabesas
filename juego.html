@@ -3,23 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>BMO Arcade</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
     <link rel="stylesheet" href="css/juego.css">
   </head>
   <body>
     <div class="col-40">
     
-      <div id="titulo">
+      <div id="titulo"><h1>Titulo</h1>
       </div>
-      <div id="instrucciones">
+      <div id="instrucciones"><h2>Instrucciones</h2>
         <ul id="lista-instrucciones">
         </ul>
       </div>
-      <div id="objetivo">
+      <div id="objetivo"><h2>Objetivo</h2>
         <div class="texto-centrado">
-          
+            <img id="imgObjetivo" src="images/picachu.png">    
         </div>
       </div>
-      <div id="ultimo-mov">
+      <div id="ultimo-mov"><h2>Ultimo movimiento</h2>
         <div id="flecha" class="texto-centrado">
           
         </div>
@@ -28,10 +29,22 @@
     </div>
     <div class="col-60">
       <div id="juego">
+        <div id="pieza1" class="pieza"><img src="images/1.jpg"></div>
+        <div id="pieza2" class="pieza"><img src="images/2.jpg"></div>
+        <div id="pieza3" class="pieza"><img src="images/3.jpg"></div>
+        <div id="pieza4" class="pieza"><img src="images/4.jpg"></div>
+        <div id="pieza5" class="pieza"><img src="images/5.jpg"></div>
+        <div id="pieza6" class="pieza"><img src="images/6.jpg"></div>
+        <div id="pieza7" class="pieza"><img src="images/7.jpg"></div>
+        <div id="pieza8" class="pieza"><img src="images/8.jpg"></div>
+        <div id="pieza9" class="pieza">  </div>
       </div>
     </div>
     <div id="footer">
-      
+      <div id="movimientosRealizados"><h3>Movimientos realizados:</h3>
+        <ul id="lista-movimientos">
+        </ul>
+      </div>
     </div>
     <script src="js/juego.js"></script>
   </body>
