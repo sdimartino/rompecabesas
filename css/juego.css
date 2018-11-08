@@ -2,11 +2,8 @@
   font-family: Mali;
   color: beige;
 }
-
-
 /*Código armado por La Foca Loca S.A. No modificar*/
 body {
-  
   width: 940px;
   margin: 5% auto;
   min-height: 100%;
@@ -24,12 +21,10 @@ li::before {
   content: "• ";
   color: #EC6778;
 }
-
 .col-40 h1 {
   font-size: 20px;
   color: #E84A5F;
 }
-
 .col-40, .col-60 {
   display: table-cell;
   margin: 0;
@@ -37,24 +32,20 @@ li::before {
 }
 .col-40 {
   background:#A51D09;
-  padding: 30px;
-  /* //color: #2C2922; */
+  padding: 10px;
+  height: 100%;
   width: 40%;
 }
-
 .col-60 {
   background: #A51D09;
   width: 60%;
 }
-
 #flecha{
   font-size: 60px;
 }
-
 .texto-centrado {
   text-align: center;
 }
-
 #footer {
   height: 100px;
   width: 100%;
@@ -64,14 +55,13 @@ li::before {
   width: 50%;
   height: 50%;
 }
-
 #juego div {
   text-align: center;
   animation: fadein 2s;
 } 
 #juego{
-  width: 600px;
-  height: 600px;
+  width: 660px;
+  height: 660px;
   background-color:orangered;
 }
 .pieza{
@@ -83,7 +73,15 @@ li::before {
   width: 100%;
   height: 100%;
 }
-
+#desafio, #titulo {
+  text-align: center;
+}
+#lista-instrucciones{
+  padding: 5%;
+}
+.tituloSecundario{
+  border: 20%;
+}
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }

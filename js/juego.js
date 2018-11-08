@@ -17,41 +17,30 @@ var filaVacia = 2;
 var columnaVacia = 2;
 
 var cargarInstrucciones=function(){
-  instrucciones.push("Presiona F5 para comenzar una nueva partida");
-  // instrucciones.push("Posicionar el cursor sobre la pieza que deseas ubicar");
-  // instrucciones.push("Hacé click sobre la pieza");
-  // // instrucciones.push("Presionando las teclas de dirección: Izquierda, Arriba, Derecha y Abajo, podrás mover cada pieza dentro del tablero");
-  // instrucciones.push("Una vez que cada pieza alcance la posición correcta según el objetivo, habrás ganado la partida");
+  instrucciones.push("Las teclas de dirección, te permite mover la pieza vacia dentro del tablero");
+  instrucciones.push("Cada movimiento de la pieza vacia, intercambia el lugar con la pieza que se encuentra en esa posición");
 }
-
 
 /* Esta función deberá recorrer el arreglo de instrucciones pasado por parámetro. 
 Cada elemento de este arreglo deberá ser mostrado en la lista con id 'lista-instrucciones'. 
 Para eso deberás usar la función ya implementada mostrarInstruccionEnLista().
 Podés ver su implementación en la ultima parte de este codigo. */
 function mostrarInstrucciones() {
-    //COMPLETAR
     for(var i=0; i<instrucciones.length; i++){
       mostrarInstruccionEnLista(instrucciones[i],'lista-instrucciones');
     }
-
 }
 function mostrarMovimientosRealizados(){
   for(var i=0; i<5; i++){
     mostrarInstruccionEnLista(movimientos[movimientos.length-i],'lista-movimientos');
   }
 }
-
 /* COMPLETAR: Crear función que agregue la última dirección al arreglo de movimientos
 y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
-
 function agregarUltimoMovimiento(codigoDireccion){
-  
     movimientos.push(codigoDireccion);
     actualizarUltimoMovimiento(codigoDireccion);
-    mostrarMovimientosRealizados();//VER
 }
-
 
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora. 
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
@@ -88,7 +77,6 @@ En vez de intercambiar esos valores vamos a terminar teniendo en ambas posicione
 Se te ocurre cómo solucionar esto con una variable temporal?
 */
 function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPos2) {
-    //COMPLETAR
     valor1 = grilla[filaPos1][columnaPos1];
     valor2= grilla[filaPos2][columnaPos2];
      
@@ -98,17 +86,13 @@ function intercambiarPosicionesGrilla(filaPos1, columnaPos1, filaPos2, columnaPo
 
 // Actualiza la posición de la pieza vacía
 function actualizarPosicionVacia(nuevaFila, nuevaColumna) {
-    //COMPLETAR
     filaVacia=nuevaFila;
     columnaVacia=nuevaColumna;
-
 }
 
 
 // Para chequear si la posicón está dentro de la grilla.
 function posicionValida(fila, columna) {
-    //COMPLETAR
-        
     return fila >=0 && fila < grilla.length && columna >=0 && columna < grilla.length;  
 }
 
@@ -284,6 +268,10 @@ function capturarTeclas() {
             evento.preventDefault();
         }
     })
+}
+
+function cambiarObjetivo(){
+ var imgCargada= document.getElementById("imgObjetivo");
 }
 
 /* Se inicia el rompecabezas mezclando las piezas 60 veces 
