@@ -35,7 +35,7 @@ function mostrarMovimientosRealizados(){
     mostrarInstruccionEnLista(movimientos[movimientos.length-i],'lista-movimientos');
   }
 }
-/* COMPLETAR: Crear función que agregue la última dirección al arreglo de movimientos
+/* Función que agrega la última dirección al arreglo de movimientos
 y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
 function agregarUltimoMovimiento(codigoDireccion){
     movimientos.push(codigoDireccion);
@@ -45,7 +45,7 @@ function agregarUltimoMovimiento(codigoDireccion){
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora. 
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
 function chequearSiGano() {
-    //COMPLETAR
+    
     var valorFormula;
     var ordenOk=true;
     for (var i=0; i < grilla.length ; i++) {
@@ -60,9 +60,8 @@ function chequearSiGano() {
     console.log(ordenOk);
 }
 
-// Implementar alguna forma de mostrar un cartel que avise que ganaste el juego
+
 function mostrarCartelGanador() {
-    //COMPLETAR
     alert("BUEN TRABAJO, GANASTE!");
 }
 
@@ -116,14 +115,14 @@ function moverEnDireccion(direccion) {
     
   // Mueve pieza hacia la derecha, reemplazandola con la blanca
   else if (direccion === codigosDireccion.DERECHA) {
-    //COMPLETAR
+    
     nuevaFilaPiezaVacia = filaVacia ;
     nuevaColumnaPiezaVacia = columnaVacia + 1;
   }
     
   // Mueve pieza hacia la izquierda, reemplazandola con la blanca
   else if (direccion === codigosDireccion.IZQUIERDA) {
-    // COMPLETAR
+    
     nuevaFilaPiezaVacia = filaVacia ;
     nuevaColumnaPiezaVacia = columnaVacia -1;
   }
@@ -135,28 +134,11 @@ function moverEnDireccion(direccion) {
     if (posicionValida(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia)) {
         intercambiarPosiciones(filaVacia, columnaVacia, nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
         actualizarPosicionVacia(nuevaFilaPiezaVacia, nuevaColumnaPiezaVacia);
-
-  //COMPLETAR: Agregar la dirección del movimiento al arreglo de movimientos
         agregarUltimoMovimiento(direccion);
     }
 }
 
 
-//////////////////////////////////////////////////////////
-////////A CONTINUACIÓN FUNCIONES YA IMPLEMENTADAS.////////
-/////////NO TOCAR A MENOS QUE SEPAS LO QUE HACES//////////
-//////////////////////////////////////////////////////////
-
-/* Las funciones y variables que se encuentran a continuación ya están implementadas.
-No hace falta que entiendas exactamente que es lo que hacen, ya que contienen
-temas aún no vistos. De todas formas, cada una de ellas tiene un comentario
-para que sepas que se está haciendo a grandes rasgos. NO LAS MODIFIQUES a menos que
-entiendas perfectamente lo que estás haciendo! */
-
-/* codigosDireccion es un objeto que te permite reemplazar
-el uso de números confusos en tu código. Para referirte a la dir
-izquierda, en vez de usar el número 37, ahora podés usar:
-codigosDireccion.IZQUIERDA. Esto facilita mucho la lectura del código. */
 var codigosDireccion = {
     IZQUIERDA: 37,
     ARRIBA: 38,
